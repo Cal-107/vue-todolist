@@ -46,5 +46,15 @@ const root = new Vue({
                 this.todoNew = '';
             };
         },
+
+        checkTodo(index) {
+            this.todos[index].completed = !this.todos[index].completed
+        },
+
+        deleteTodo() {
+            console.log('delete todo');
+            
+        }
+
     }
 });

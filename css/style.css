@@ -9,3 +9,8 @@ header img {
 .completed {
     text-decoration: line-through;
 }
+
+.deleteTodo,
+.todoCompleted {
+    cursor: pointer;
+}
