@@ -1,0 +1,11 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header img {
+    width: 100px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
