@@ -35,7 +35,7 @@ const root = new Vue({
     },
     methods: {
         addNewTodo() {
-            // se todoNew è diverso da 'striga vuota', allora pusha cpm primo della lista
+            // se todoNew è diverso da 'striga vuota', allora pusha come primo della lista
             if(this.todoNew !== '') {
                 this.todos.unshift({
                     text: this.todoNew,
@@ -44,17 +44,20 @@ const root = new Vue({
 
                 // reset input
                 this.todoNew = '';
+
+                // add focus
+                this.$refs.todoFocus.focus();
             };
         },
 
         checkTodo(index) {
+            // Creo lo switch per cambiare il valore di completed da true a false e viceversa utilizzando l'indice per indicare dove eseguire il comando
             this.todos[index].completed = !this.todos[index].completed
         },
 
-        deleteTodo() {
-            console.log('delete todo');
-            
+        deleteTodo(index) {
+            // utilizzando splice gli dico cosa deve elimare al click
+            this.todos.splice(index, 1);
         }
-
     }
 });

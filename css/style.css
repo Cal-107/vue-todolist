@@ -11,6 +11,7 @@ header img {
 }
 
 .deleteTodo,
-.todoCompleted {
+.todoCompleted,
+.fa-plus {
     cursor: pointer;
 }
