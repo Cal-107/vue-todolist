@@ -25,13 +25,17 @@
         <main class="d-flex flex-column align-items-center">
 
             <section class="d-flex w-50 mb-3 inputTodo">
-                <input class="input-group flex-grow-1" placeholder="Inserisci qui il tuo todo">
-                    <button type="button"
-                     class="btn btn-success ms-3"
-                     @click="addNewTodo"
-                     >
-                        Aggiungi
-                    </button>
+                <input class="input-group flex-grow-1" placeholder="Inserisci qui il tuo todo"
+                v-model.trim="todoNew"
+                @keyup.enter="addNewTodo"
+                >
+
+                <button type="button"
+                    class="btn btn-success ms-3"
+                    @click="addNewTodo"
+                    >
+                    Aggiungi
+                </button>
             </section>
 
             <section class="w-25">
@@ -47,14 +51,6 @@
                         </span>
                         <i class="fas fa-trash-alt"></i>
                     </li>
-                    <!-- <li class="list-unstyled p-2 w-100 border todoCompleted">
-                        <span class="text">todo text</span>
-                        <i class="far fa-trash-alt deleteTodo"></i>
-                    </li>
-                    <li class="list-unstyled p-2 w-100 border todoCompleted">
-                        <span class="text">todo text</span>
-                        <i class="far fa-trash-alt deleteTodo"></i>
-                    </li> -->
             </section>
 
         </main>

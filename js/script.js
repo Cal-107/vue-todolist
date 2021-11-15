@@ -31,6 +31,20 @@ const root = new Vue({
                 completed: false,
             },
         ],
-        cleanTodo: '',
+        todoNew: '',
     },
+    methods: {
+        addNewTodo() {
+            // se todoNew è diverso da 'striga vuota', allora pusha cpm primo della lista
+            if(this.todoNew !== '') {
+                this.todos.unshift({
+                    text: this.todoNew,
+                    completed: false,
+                });
+
+                // reset input
+                this.todoNew = '';
+            };
+        },
+    }
 });
